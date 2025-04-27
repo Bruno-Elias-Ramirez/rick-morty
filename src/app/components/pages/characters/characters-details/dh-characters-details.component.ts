@@ -12,11 +12,10 @@ import {Observable} from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DhCharactersDetailsComponent implements OnInit {
-  public character$!: Observable<DhCharacter | null>;
+  public character$!: Observable<DhCharacter | undefined>;
 
   constructor(private _dhDataService: DhDataService,
               private _route: ActivatedRoute) {
-    this.character$ = new Observable<DhCharacter | null>();
   }
 
   ngOnInit(): void {
@@ -24,11 +23,9 @@ export class DhCharactersDetailsComponent implements OnInit {
   }
 
   private _loadCharacter(): void {
-    const characterId = Number(this._route.snapshot.paramMap.get('id'));
-    console.log('characterId', characterId);
-    this.character$ = this._dhDataService.getCharacters$().pipe(
+    const characterId = this._route.snapshot.paramMap.get('id');
 
-      map(characters => characters.find(c => c.id === characterId) || null)
-    );
+    this.character$ = this._dhDataService.getCharacters$()
+      .pipe(map(characters => characters.find(character => Number(character.id) === Number(characterId))));
   }
 }

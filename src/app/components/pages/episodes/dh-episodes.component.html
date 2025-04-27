@@ -1,0 +1,7 @@
+<article class="dh-episodes-container">
+  <ul class="dh-episodes__list">
+    <li class="dh-episodes__item" *ngFor="let episode of episodes$ | async">
+      {{episode.episode}} - {{episode.name}}
+    </li>
+  </ul>
+</article>

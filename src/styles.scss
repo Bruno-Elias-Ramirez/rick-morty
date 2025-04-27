@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import "./assets/styles/dh-styles";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --color-background: #ffffff;
+  --color-background-light: #f9f9f9;
+  --color-border: #e0e0e0;
+  --color-primary: #1976d2;
+  --color-secondary: #1f2937;
+  --color-shadow: rgba(0, 0, 0, 0.2);
+
+  --font-family-base: 'Roboto', sans-serif;
+  --font-size-base: 14px;
+  --font-weight-bold: 600;
+
+  --shadow-default: 0 4px 6px var(--color-shadow);
+
+  --sidebar-width: 240px;
+}

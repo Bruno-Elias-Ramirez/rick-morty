@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rick-and-morty-app';
+  public isSidebarOpen = false;
+
+  public toggleSidebar(): void {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
 }

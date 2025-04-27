@@ -1,0 +1,26 @@
+<header class="dh-header">
+  <button class="dh-header__toggle" (click)="toggleSidebar()" aria-label="Toggle sidebar">
+    <span class="dh-header__bar"></span>
+    <span class="dh-header__bar"></span>
+    <span class="dh-header__bar"></span>
+  </button>
+
+  <div class="dh-sidebar" [class.dh-sidebar--open]="isSidebarOpen">
+    <nav class="dh-sidebar__nav">
+      <ul class="dh-sidebar__list">
+        <li class="dh-sidebar__item">
+          <a [routerLink]="['/home']" class="dh-sidebar__link">Home</a>
+        </li>
+        <li class="dh-sidebar__item">
+          <a [routerLink]="['/character-list']" class="dh-sidebar__link">Characters</a>
+        </li>
+        <li class="dh-sidebar__item">
+          <a [routerLink]="['/episodes']" class="dh-sidebar__link">Episodes</a>
+        </li>
+        <li class="dh-sidebar__item">
+          <a [routerLink]="['/about']" class="dh-sidebar__link">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

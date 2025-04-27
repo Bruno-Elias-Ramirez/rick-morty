@@ -1,0 +1,80 @@
+.dh-card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-default);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s;
+  width: 300px;
+
+  &:hover {
+    box-shadow: 0 8px 16px var(--color-shadow);
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  &__image {
+    align-items: center;
+    background-color: var(--color-background-light);
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__name {
+    color: var(--color-secondary);
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    color: var(--color-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    gap: 4px;
+  }
+
+  &__label {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+  }
+}

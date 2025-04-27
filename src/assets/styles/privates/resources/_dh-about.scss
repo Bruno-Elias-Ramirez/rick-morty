@@ -1,0 +1,55 @@
+.dh-about-page {
+  background-color: var(--color-background);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  margin: 32px auto;
+  max-width: 1000px;
+  padding: 32px;
+  text-align: center;
+  width: 100%;
+}
+
+.dh-title {
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 32px;
+}
+
+.dh-about__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.dh-about__paragraph {
+  color: var(--color-secondary);
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+.dh-about__img {
+  display: flex;
+  justify-content: center;
+
+  .dh-about__picture {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.dh-about__copy {
+  color: var(--color-secondary);
+  font-size: 13px;
+  margin-top: 32px;
+}
+
+.dh-text-white {
+  color: var(--color-secondary);
+}

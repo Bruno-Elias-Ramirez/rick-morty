@@ -1,0 +1,28 @@
+<article class="dh-card">
+  <a [routerLink]="['/characters-details', character.id]" class="dh-card__link"></a>
+
+  <figure class="dh-card__image">
+    <img rel="preload"
+         is="image"
+         width="200"
+         height="200"
+         [src]="character.image"
+         [alt]="character.name">
+  </figure>
+
+  <div class="dh-card__details">
+    <h3 class="dh-card__name">{{ character.name }}</h3>
+
+    <ul class="dh-card__list">
+      <li class="dh-card__item">
+        <label class="dh-card__label">Status:</label> {{ character.status }}
+      </li>
+      <li class="dh-card__item">
+        <label class="dh-card__label">Species:</label> {{ character.species }}
+      </li>
+      <li class="dh-card__item">
+        <label class="dh-card__label">Gender:</label> {{ character.gender }}
+      </li>
+    </ul>
+  </div>
+</article>

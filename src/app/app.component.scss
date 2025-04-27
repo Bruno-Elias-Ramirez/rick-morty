@@ -1,0 +1,12 @@
+.dh-main {
+  background-color: var(--color-background-light);
+  font-family: var(--font-family-base);
+  margin-left: 0;
+  min-height: 100vh;
+  padding: 60px 30px 30px 30px;
+  transition: margin-left 0.3s ease;
+
+  &--shifted {
+    margin-left: 240px;
+  }
+}
